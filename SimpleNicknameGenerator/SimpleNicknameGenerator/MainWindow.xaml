@@ -3,6 +3,41 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <TextBox>Witam :)</TextBox>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBox Height="30" Width="270"
+                 x:Name="Witam"
+                 Text="Witamy w programie SimpleNicknameGenerator"
+                 Grid.Row="1"
+                 Margin="1.5"/>
+        <TextBox Height="30"
+                 Width="280"
+                 x:Name="Opis"
+                 Text="Aby wygenerować ksywkę wciśnij poniższy przycisk"
+                 Grid.Row="3"
+                 Margin="1.5" />
+        <Button Height="30"
+                Width="120"
+                x:Name="Button"
+                Grid.Row="5"
+                Margin="1.5"
+                Click="Button_Click">
+            Generuj ksywkę!
+        </Button>
+        <TextBox Height="30"
+                 Width="200"
+                 x:Name="Ksywka"
+                 Grid.Row="7"
+                 Margin="1.5"
+                 />
     </Grid>
 </Window>
