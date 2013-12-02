@@ -27,8 +27,8 @@ namespace SimpleNicknameGenerator
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string[] przymiotniki = System.IO.File.ReadAllLines(@"D:\Learning\SimpleNicknameGenerator/text1.txt");
-            string[] rzeczowniki = System.IO.File.ReadAllLines(@"D:\Learning\SimpleNicknameGenerator/text2.txt");
+            string[] przymiotniki = System.IO.File.ReadAllLines(@"D:\Learning\SimpleNicknameGenerator/text1.txt", Encoding.Default);
+            string[] rzeczowniki = System.IO.File.ReadAllLines(@"D:\Learning\SimpleNicknameGenerator/text2.txt", Encoding.Default);
 
             Random losuj = new Random();
             int indeksPrzymiotnika = losuj.Next(1, przymiotniki.Length) - 1;
