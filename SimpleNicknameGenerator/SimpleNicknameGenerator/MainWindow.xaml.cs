@@ -27,23 +27,13 @@ namespace SimpleNicknameGenerator
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string[] text1 = System.IO.File.ReadAllLines(@"D:\Learning\SimpleNicknameGenerator/text1.txt");
-            string[] text2 = System.IO.File.ReadAllLines(@"D:\Learning\SimpleNicknameGenerator/text2.txt");
+            string[] przymiotniki = System.IO.File.ReadAllLines(@"D:\Learning\SimpleNicknameGenerator/text1.txt");
+            string[] rzeczowniki = System.IO.File.ReadAllLines(@"D:\Learning\SimpleNicknameGenerator/text2.txt");
 
-            int a = 0;
-            int b = 0;
-            foreach (string i in text1)
-            {
-                a++;
-            }
-            foreach (string i in text2)
-            {
-                b++;
-            }
             Random losuj = new Random();
-            int c = losuj.Next(1, a);
-            int d = losuj.Next(1, b);
-            Ksywka.Text = text1[c-1] + " " + text2[d-1];
+            int indeksPrzymiotnika = losuj.Next(1, przymiotniki.Length) - 1;
+            int indeksRzeczownika = losuj.Next(1, rzeczowniki.Length) - 1;
+            Ksywka.Text = przymiotniki[indeksPrzymiotnika] + " " + rzeczowniki[indeksRzeczownika];
         }
     }
 }
