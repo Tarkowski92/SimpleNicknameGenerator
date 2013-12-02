@@ -5,3 +5,6 @@ Terminator
 Bokser
 Fagas
 Tester
+Kujon
+Debil
+Przychlast

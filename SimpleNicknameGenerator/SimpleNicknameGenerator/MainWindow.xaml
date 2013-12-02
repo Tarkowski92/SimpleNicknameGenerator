@@ -84,7 +84,7 @@
                Content=" to teraz "
                />
         <TextBox Height="30"
-                 Width="200"
+                 Width="320"
                  x:Name="Ksywka"
                  Grid.Row="9"
                  Grid.Column="3"

@@ -6,3 +6,10 @@ Silny
 Czarny
 Niesamowity
 Chudy
+Gruby
+Bia³y
+Czerwony
+Zielony
+Krzywy
+Niski
+Wielki
