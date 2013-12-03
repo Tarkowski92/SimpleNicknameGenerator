@@ -13,3 +13,15 @@ Zielony
 Krzywy
 Niski
 Wielki
+Szkar³atny
+B³êkitny
+Stalowy
+Brzydki
+Piêkny
+Skoœnooki
+¯ó³ty
+Garbaty
+Pryszczaty
+S³aby
+W¹ski
+Szeroki

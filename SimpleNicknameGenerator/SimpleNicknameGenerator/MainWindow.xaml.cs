@@ -23,6 +23,8 @@ namespace SimpleNicknameGenerator
         public MainWindow()
         {
             InitializeComponent();
+            //OsobaComboBox.Items = moje itemy
+            // http://www.youtube.com/watch?v=-ryNYYPalO8
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -34,6 +36,14 @@ namespace SimpleNicknameGenerator
             int indeksPrzymiotnika = losuj.Next(1, przymiotniki.Length) - 1;
             int indeksRzeczownika = losuj.Next(1, rzeczowniki.Length) - 1;
             Ksywka.Text = przymiotniki[indeksPrzymiotnika] + " " + rzeczowniki[indeksRzeczownika];
+        }
+
+        private void OsobaComboBox_DropDownClosed(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(OsobaComboBox.Text))
+            {
+                Button.IsEnabled = true;
+            }
         }
     }
 }
