@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using LogikaBiznesowa;
 
 namespace SimpleNicknameGenerator
 {
@@ -29,13 +30,15 @@ namespace SimpleNicknameGenerator
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string[] przymiotniki = System.IO.File.ReadAllLines(@"D:\Learning\SimpleNicknameGenerator/text1.txt", Encoding.Default);
-            string[] rzeczowniki = System.IO.File.ReadAllLines(@"D:\Learning\SimpleNicknameGenerator/text2.txt", Encoding.Default);
+            //string[] przymiotniki = System.IO.File.ReadAllLines(@"D:\Learning\SimpleNicknameGenerator/text1.txt", Encoding.Default);
+            //string[] rzeczowniki = System.IO.File.ReadAllLines(@"D:\Learning\SimpleNicknameGenerator/text2.txt", Encoding.Default);
 
-            Random losuj = new Random();
-            int indeksPrzymiotnika = losuj.Next(1, przymiotniki.Length) - 1;
-            int indeksRzeczownika = losuj.Next(1, rzeczowniki.Length) - 1;
-            Ksywka.Text = przymiotniki[indeksPrzymiotnika] + " " + rzeczowniki[indeksRzeczownika];
+            //Random losuj = new Random();
+            //int indeksPrzymiotnika = losuj.Next(1, przymiotniki.Length) - 1;
+            //int indeksRzeczownika = losuj.Next(1, rzeczowniki.Length) - 1;
+            //Ksywka.Text = przymiotniki[indeksPrzymiotnika] + " " + rzeczowniki[indeksRzeczownika];
+            Generate generacja = new Generate();
+            Ksywka.Text = generacja.GenerateNickname();
         }
 
         private void OsobaComboBox_DropDownClosed(object sender, EventArgs e)
